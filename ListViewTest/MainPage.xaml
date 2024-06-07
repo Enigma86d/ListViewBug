@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ListViewTest.MainPage">
+
+
+
+    <StackLayout Orientation="Vertical" Margin="10">
+
+        <ListView x:Name="MyListView"
+                              HeightRequest="100"
+                              VerticalOptions="Center"
+                              HasUnevenRows="True"
+                              BackgroundColor="LightBlue"
+                              Margin="0, 0, 0, 10">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid BackgroundColor="#404040"
+                                          Margin="0"
+                                          ColumnSpacing="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0"
+                                    BackgroundColor="#F0F0F0"
+                                    Margin="1"
+                                    HorizontalTextAlignment="Start"
+                                    FontSize="16"
+                                    Text="{Binding Item1, StringFormat='{0}'}"/>
+                            <Label Grid.Column="1"
+                                    BackgroundColor="#F0F0F0"
+                                    Margin="1"
+                                    HorizontalTextAlignment="Center"
+                                    FontSize="16"
+                                    Text="{Binding Item2, StringFormat='{0}'}"/>
+                            <Label Grid.Column="2"
+                                    BackgroundColor="#F0F0F0"
+                                    Margin="1"
+                                    HorizontalTextAlignment="Center"
+                                    FontSize="16"
+                                    Text="{Binding Item3, StringFormat='{0}'}"/>
+                            <Label Grid.Column="3"
+                                    BackgroundColor="#F0F0F0"
+                                    Margin="1"
+                                    HorizontalTextAlignment="Center"
+                                    FontSize="16"
+                                    Text="{Binding Item4, StringFormat='{0}'}"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+
+    </StackLayout>
+
+</ContentPage>
